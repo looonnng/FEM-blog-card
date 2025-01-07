@@ -65,11 +65,17 @@ body {
   padding: var(--spacing-xl);
   border-radius: var(--spacing-xl);
   border: 2px solid var(--color-secondary-dark);
-  box-shadow: #000 8px 8px;
+  will-change: filter;
+  transition: all 250ms ease;
 
   & > div + div {
     margin-top: var(--spacing-xl);
   }
+}
+
+.card:hover {
+  transition: all 250ms ease;
+  filter: drop-shadow(#000 10px 10px);
 }
 
 .img-wrapper {
