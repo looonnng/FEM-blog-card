@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Figtree';
+  src: url('./assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-base: hsl(0, 0%, 100%);
+  --color-primary: hsl(47, 88%, 63%);
+  --color-secondary-light: hsl(0, 0%, 42%);
+  --color-secondary-dark: hsl(0, 0%, 7%);
+
+  --fs-base-s: 14px;
+  --fs-base-m: 16px;
+  --fs-base-l: 24px;
+  --line-height-base: 1.5;
+
+  --spacing-s: 4px;
+  --spacing-m: 8px;
+  --spacing-l: 12px;
+  --spacing-xl: 24px;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background: var(--color-primary);
+}
+
+/* Utils */
+.text-preset-1 {
+  font-family: 'Figtree';
+  font-weight: 800;
+  font-size: var(--fs-base-l);
+  line-height: var(--line-height-base);
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.card-wrapper {
+  width: 100%;
+  height: 98%;
+
+  padding: var(--spacing-xl);
+}
+
+.card {
+  max-width: 400px;
+  font-family: 'Figtree';
+  font-size: var(--fs-base-s);
+  line-height: var(--line-height-base);
+
+  background-color: var(--color-base);
+  padding: var(--spacing-xl);
+  border-radius: var(--spacing-xl);
+  border: 2px solid var(--color-secondary-dark);
+  box-shadow: #000 8px 8px;
+
+  & > div + div {
+    margin-top: var(--spacing-xl);
+  }
+}
+
+.img-wrapper {
+  & img {
+    width: 100%;
+    border-radius: var(--spacing-l);
+  }
+}
+
+.content {
+  & * + * {
+    margin-top: var(--spacing-l);
+  }
+}
+
+.category {
+  display: inline-block;
+  background-color: var(--color-primary);
+  padding: var(--spacing-s) var(--spacing-m);
+  font-size: var(--fs-base-s);
+  border-radius: var(--spacing-s);
+}
+
+.date {
+  color: var(--color-secondary-dark);
+}
+
+.title {
+  font-size: var(--fs-base-l);
+
+  & a:active {
+    color: var(--color-primary);
+  }
+}
+
+a {
+  color: var(--color-secondary-dark);
+  text-decoration: none;
+}
+
+.description {
+  font-size: var(--fs-base-m);
+  color: var(--color-secondary-light);
+}
+
+.author {
+  display: flex;
+  gap: var(--spacing-l);
+  align-items: center;
+
+
+  & img {
+    height: 32px;
+  }
+}
+
+.author-name {
+  font-size: var(--fs-base-m);
+  line-height: var(--line-height-base);
+
+}
+
+.attribution {
+  font-size: var(--fs-base-s);
+  text-align: center;
+}
+.attribution a {
+  color: var(--color-secondary-dark);
+}
